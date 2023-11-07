@@ -9,10 +9,12 @@ const instance = axios.create({
   },
 });
 
-export const getWeather = () => {
-  const lat = 35.171637080897135;
-  const lon = 129.08850637879448;
+export const getWeather = ({ queryKey }) => {
+  const [weather, lat, lon] = queryKey;
   return instance
     .get(`weather?lat=${lat}&lon=${lon}`)
     .then((response) => response.data);
 };
+
+// 현재 위치를 가져오는 매서드
+// => navigator.geolocation.getCurrentPosition(location)
