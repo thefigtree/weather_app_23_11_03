@@ -80,7 +80,8 @@ export const Home = () => {
   // => api에 요청할 때 사용하는 hook
   // => 비동기 사용시 상태관리하는 hook
   // => useQuery를 사용할 땐 반드시 QueryClientProvider를 설정해줘야 됨
-  console.log(data);
+
+  // console.log(data);
 
   // const {
   //   name,
